@@ -1,97 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./assets/icon.png">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" href="./assets/icon.png" />
     <title>Celebrar</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
     <script src="./script.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <div id="head">
-            <div id="logo"></div>
-            <div class="divtools">
-                <button id="newfieldbtn">New field</button>
+      <div id="head">
+        <div id="logo"></div>
+        <div class="divtools">
+          <button id="newfieldbtn">New field</button>
 
-                <label class="tlables br" for="heightipt">Height</label>
-                <input id="heightipt" class="br" type="number" value="0" step="1" min="0" max="1000">
+          <label class="tlables br" for="heightipt">Height</label>
+          <input
+            id="heightipt"
+            class="br"
+            type="number"
+            value="0"
+            step="1"
+            min="0"
+            max="1000"
+          />
 
-                <label class="tlables br" for="widthipt">Width</label>
-                <input id="widthipt" class="br" type="number" value="0" step="1" min="0" max="1000">
-
-            </div>
-
-            <div id="divtool" class="divtools">
-                <label class="tlables br" for="border">Border</label>
-                <select id="selection-dropdown" class="br">
-                    <option value="solid" selected>Solid</option>
-                    <option value="dashed">Dashed</option>
-                    <option value="dotted">Dotted</option>
-                    <option value="none">None</option>
-                    
-                </select>
-
-                <label class="tlables br" for="radius">Radius</label>
-                <input id="radius" class="br" type="number" value="0" step="1" min="0" max="1000">
-
-                <label class="tlables br" for="textaligne">Text Aligne</label>
-                <select id="text-position" class="br">
-                    <option value="top" selected>Top</option>
-                    <option value="bottom">Bottom</option>
-                    <option value="center" selected>Center</option>
-                    <option value="left">Left</option>
-                    <option value="right">Right</option>
-                    
-                </select>
-
-            </div>
-
-            <div class="divtools">
-                <label class="tlables br" for="fontsize">Font Size</label>
-                <input id="fontsize" class="br" type="number" value="16" step="1" min="10" max="1000">
-
-                <label class="tlables br" for="fontwidth">Font Width</label>
-                <input id="fontwidth" class="br" type="number" value="10" step="50" min="10" max="1000">
-
-                <label class="tlables br" for="font-family">Font Style</label>
-                <select id="font-family" class="br">
-                    <option value="fantasy" selected>Fantasy</option>
-                    <option value="Georgia">Georgia</option>
-                    <option value="Arial" selected>Arial</option>
-                    <option value="Times New Roman">Times New Roman</option>
-                    <option value="cursive">Cursive</option>
-                    
-                </select>
-
-            </div>
-
-            <div class="divtools br" id="colortools">
-
-                <label for="textcolor" class="tlables br">Text Color</label>
-                <input type="color" class="br" id="textcolor">
-                <label for="bgcolor" class="tlables br">Backgound Color</label>
-                <input type="color" id="bgcolor" class="br">
-
-            </div>
-
-            <div class="divtools" id="imgtool">
-                <label for="bgimage" class="tlables br">Backgound Image</label>
-                <input id="bgimage" class="br" type="file" accept="image/*">
-                <a id="download"><button id="saveinv">Save Invitation</button></a>
-                
-            </div>
-
+          <label class="tlables br" for="widthipt">Width</label>
+          <input
+            id="widthipt"
+            class="br"
+            type="number"
+            value="0"
+            step="1"
+            min="0"
+            max="1000"
+          />
         </div>
+
+        <div id="divtool" class="divtools">
+          <label class="tlables br" for="border">Border</label>
+          <select id="selection-dropdown" class="br">
+            <option value="solid" selected>Solid</option>
+            <option value="dashed">Dashed</option>
+            <option value="dotted">Dotted</option>
+            <option value="none">None</option>
+          </select>
+
+          <label class="tlables br" for="radius">Radius</label>
+          <input
+            id="radius"
+            class="br"
+            type="number"
+            value="0"
+            step="1"
+            min="0"
+            max="1000"
+          />
+
+          <label class="tlables br" for="textaligne">Text Aligne</label>
+          <select id="text-position" class="br">
+            <option value="top" selected>Top</option>
+            <option value="bottom">Bottom</option>
+            <option value="center" selected>Center</option>
+            <option value="left">Left</option>
+            <option value="right">Right</option>
+          </select>
+        </div>
+
+        <div class="divtools">
+          <label class="tlables br" for="fontsize">Font Size</label>
+          <input
+            id="fontsize"
+            class="br"
+            type="number"
+            value="16"
+            step="1"
+            min="10"
+            max="1000"
+          />
+
+          <label class="tlables br" for="fontwidth">Font Width</label>
+          <input
+            id="fontwidth"
+            class="br"
+            type="number"
+            value="10"
+            step="50"
+            min="10"
+            max="1000"
+          />
+
+          <label class="tlables br" for="font-family">Font Style</label>
+          <select id="font-family" class="br">
+            <option value="fantasy" selected>Fantasy</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Arial" selected>Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="cursive">Cursive</option>
+          </select>
+        </div>
+
+        <div class="divtools br" id="colortools">
+          <label for="textcolor" class="tlables br">Text Color</label>
+          <input type="color" class="br" id="textcolor" />
+          <label for="bgcolor" class="tlables br">Backgound Color</label>
+          <input type="color" id="bgcolor" class="br" />
+        </div>
+
+        <div class="divtools" id="imgtool">
+          <label for="bgimage" class="tlables br">Backgound Image</label>
+          <input id="bgimage" class="br" type="file" accept="image/*" />
+          <a id="download"><button id="saveinv">Save Invitation</button></a>
+        </div>
+      </div>
     </header>
 
     <main>
-        <div id="body"></div>
+      <div id="body"></div>
     </main>
-    
-    
-</body>
+  </body>
 </html>
